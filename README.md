@@ -12,9 +12,10 @@
 | `SKILL.md` | 主入口：两种模式、工作流 0–8、七条铁律、输出清单、踩坑点 |
 | `references/01-frame.md` | 需求四问、现状追问、前提挑战、可判对错的检查项 |
 | `references/02-diverge.md` | 角色 × 环节矩阵、冲突表、边界与反例、发散技法、收敛取舍 |
-| `references/03-research.md` | 子问题拆解、机制卡片、三层合成、开源仓库怎么读 |
+| `references/03-research.md` | 领域判定、五层信源（官方/门户/产品/社区/YouTube）、子问题拆解、机制卡片、三层合成、开源仓库怎么读 |
 | `references/04-review.md` | 智囊团、苏格拉底追问、三道闸自审、失败模式 |
-| `assets/brainstorm-doc-template.md` | 脑爆文档骨架 |
+| `assets/brainstorm-doc-template.md` | 脑爆文档骨架（含信源覆盖表） |
+| `scripts/yt_research.py` | YouTube 搜索、取字幕、无字幕时取简介与章节 |
 | `CHANGELOG.md` | 版本记录，以及每条机制从哪里借来的 |
 
 ## 安装（Claude Code）
@@ -54,7 +55,7 @@ cp -R yuan 你的项目/.claude/skills/yuan
 
 ## 其它平台
 
-全部是纯 Markdown，不依赖脚本。平台不支持 skill 的话，把 `SKILL.md` 当系统提示词，`references/` 当知识库喂进去也能用。
+除 `scripts/yt_research.py`（YouTube 调研，需 `brew install yt-dlp deno`；没装时按 `references/03-research.md` §1.5 降级）外，全部是纯 Markdown。平台不支持 skill 的话，把 `SKILL.md` 当系统提示词，`references/` 当知识库喂进去也能用。
 
 ## 和 yuanskill-pro 的关系
 

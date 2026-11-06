@@ -1,5 +1,24 @@
 # CHANGELOG · yuan
 
+## v1.2.0（2026-11-06）
+
+一句话：阶段 3 起手加领域判定；每个子问题都按五层信源找来源（一手官方 / 门户与聚合 / 相关产品 / 社区 / YouTube）；YouTube 走脚本；覆盖表必须填满。与 yuanskill-pro v2.1.0 同步。
+
+### 来源
+用户 2026-11-06 原话：任何问题先分辨所在领域，找出该领域的网站、门户站和相关产品并搜索调研；YouTube 调研作为默认调研的一部分。方法依据见 yuanskill-pro v2.1.0 CHANGELOG：STORM、GPT Researcher、open_deep_research、Jina、Anthropic 多智能体研究文章、yt-dlp 实测，以及 strategy-essence 的覆盖表、停止规则和升级链。
+
+### 改动
+- `references/03-research.md`：新增 §0 领域判定、§1.5 五层信源（门户发现、检索矩阵、停止规则、YouTube 脚本、降级、覆盖表）；§2.1 来源优先级与五层对齐。
+- `SKILL.md`：阶段 3 改名并重写；BASIC 改为 `0 → 3 → 5 → 6 → 7`，阶段 3 完整做（用户定）；输出第 9 条、BASIC 交付、踩坑点同步。
+- `assets/brainstorm-doc-template.md` §8 加领域判定和覆盖表。
+- 新增 `scripts/yt_research.py`：yuanskill-pro 正本的副本，依赖 yt-dlp＋deno。
+
+### 保留
+子问题拆解、机制卡片、三层合成、反方证据、开源挖掘都不动，五层信源只是加在它们前面的找来源方法。
+
+### 未做
+还没拿真实题目跑回归对比。
+
 ## v1.1.0（2026-10-13）
 
 一句话：融入用户给的五种脑暴方法。按阶段放，四处一起改（违反"一次只改一个"，靠回归对比兜底）。
